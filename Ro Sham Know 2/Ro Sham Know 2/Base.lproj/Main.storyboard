@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="artwork" translatesAutoresizingMaskIntoConstraints="NO" id="kSx-Hj-fGW">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="us9-7p-TWc" userLabel="TitleVisualEffectView">
+                                <rect key="frame" x="150" y="100" width="300" height="100"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="B6g-vb-Xcq">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ro Sham Know" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yit-4V-Zax">
+                                            <rect key="frame" x="20" y="36" width="260" height="29"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yit-4V-Zax" firstAttribute="centerY" secondItem="B6g-vb-Xcq" secondAttribute="centerY" id="a3X-BB-K33"/>
+                                        <constraint firstAttribute="trailing" secondItem="yit-4V-Zax" secondAttribute="trailing" constant="20" symbolic="YES" id="ffg-sL-n5w"/>
+                                        <constraint firstItem="yit-4V-Zax" firstAttribute="leading" secondItem="B6g-vb-Xcq" secondAttribute="leading" constant="20" symbolic="YES" id="wzg-yD-B5x"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="mAy-EO-QZU"/>
+                                    <constraint firstAttribute="height" constant="100" id="xBc-Kc-EV2"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uj-ee-9gb" userLabel="SettingVisualEffectView">
+                                <rect key="frame" x="150" y="425" width="300" height="50"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OUw-aD-WKH">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haptic Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1e-xw-gyA">
+                                            <rect key="frame" x="20" y="14" width="203" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8uJ-Ad-CWb">
+                                            <rect key="frame" x="231" y="9" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="hapticFeedbackSwitchDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="I7G-ER-8QC"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="o1e-xw-gyA" firstAttribute="leading" secondItem="OUw-aD-WKH" secondAttribute="leading" constant="20" symbolic="YES" id="S5N-IQ-OYm"/>
+                                        <constraint firstItem="8uJ-Ad-CWb" firstAttribute="centerY" secondItem="OUw-aD-WKH" secondAttribute="centerY" id="g04-ht-pMD"/>
+                                        <constraint firstAttribute="trailing" secondItem="8uJ-Ad-CWb" secondAttribute="trailing" constant="20" symbolic="YES" id="pJa-w7-d6n"/>
+                                        <constraint firstItem="o1e-xw-gyA" firstAttribute="centerY" secondItem="OUw-aD-WKH" secondAttribute="centerY" id="u2X-n9-SAj"/>
+                                        <constraint firstItem="8uJ-Ad-CWb" firstAttribute="leading" secondItem="o1e-xw-gyA" secondAttribute="trailing" constant="8" symbolic="YES" id="xyu-bD-kfM"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7WA-Jf-DRZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="aRB-fp-YMh"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="us9-7p-TWc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="1hR-0s-WuF"/>
+                            <constraint firstItem="4uj-ee-9gb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dwz-4R-Z5c"/>
+                            <constraint firstItem="us9-7p-TWc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FPn-OB-n01"/>
+                            <constraint firstItem="kSx-Hj-fGW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="GJk-2e-0K5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kSx-Hj-fGW" secondAttribute="bottom" id="Rsy-As-2yQ"/>
+                            <constraint firstItem="kSx-Hj-fGW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Sem-vl-WaC"/>
+                            <constraint firstItem="kSx-Hj-fGW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qgg-Ir-tjX"/>
+                            <constraint firstItem="4uj-ee-9gb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="xBQ-qM-PlI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hapticFeedbackSwitch" destination="8uJ-Ad-CWb" id="QG6-7M-G06"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="467"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="artwork" width="512" height="512"/>
+    </resources>
+</document>
